@@ -1,0 +1,4790 @@
+{
+  "protocol": "two-query-adequacy-probe-v2",
+  "fresh_seed": 8921438,
+  "cases_per_label": 192,
+  "bootstrap_seed": 513780,
+  "bootstrap_replicates": 10000,
+  "bench": {
+    "cavity_tau": 4e-05,
+    "detector_tau": 0.00012,
+    "thermal_tau_grid": [
+      0.0007,
+      0.0012,
+      0.002,
+      0.0035,
+      0.006,
+      0.01
+    ],
+    "noise_sd": 0.0075,
+    "drive_amplitude": 0.2
+  },
+  "thresholds": {
+    "min_probability": 0.8,
+    "nominal_rejection_alpha": 0.01
+  },
+  "design_hz": {
+    "replicate_300": [
+      300,
+      300
+    ],
+    "add_1000": [
+      300,
+      1000
+    ]
+  },
+  "query_cost_per_case": 2,
+  "summaries": {
+    "replicate_300": {
+      "in_menu_n": 576,
+      "out_of_menu_n": 192,
+      "in_menu_correct_count": 539,
+      "in_menu_correct_fraction_all": 0.9357638888888888,
+      "in_menu_commit_fraction": 0.9392361111111112,
+      "in_menu_correct_given_commitment": 0.9963031423290203,
+      "in_menu_wrong_label_fraction_all": 0.003472222222222222,
+      "in_menu_unresolved_fraction": 0.046875,
+      "in_menu_false_reject_fraction": 0.013888888888888888,
+      "omitted_false_acceptance_fraction": 0.96875,
+      "omitted_unresolved_fraction": 0.03125,
+      "omitted_out_of_class_fraction": 0.0,
+      "confusion_counts": {
+        "kerr": {
+          "kerr": 180,
+          "thermal": 0,
+          "mixed": 0,
+          "unresolved": 12,
+          "out_of_class": 0
+        },
+        "thermal": {
+          "kerr": 0,
+          "thermal": 173,
+          "mixed": 1,
+          "unresolved": 13,
+          "out_of_class": 5
+        },
+        "mixed": {
+          "kerr": 0,
+          "thermal": 1,
+          "mixed": 186,
+          "unresolved": 2,
+          "out_of_class": 3
+        },
+        "omitted": {
+          "kerr": 0,
+          "thermal": 0,
+          "mixed": 186,
+          "unresolved": 6,
+          "out_of_class": 0
+        }
+      },
+      "second_frequencies_hz": {
+        "300": 768
+      }
+    },
+    "add_1000": {
+      "in_menu_n": 576,
+      "out_of_menu_n": 192,
+      "in_menu_correct_count": 543,
+      "in_menu_correct_fraction_all": 0.9427083333333334,
+      "in_menu_commit_fraction": 0.9444444444444444,
+      "in_menu_correct_given_commitment": 0.9981617647058824,
+      "in_menu_wrong_label_fraction_all": 0.001736111111111111,
+      "in_menu_unresolved_fraction": 0.050347222222222224,
+      "in_menu_false_reject_fraction": 0.005208333333333333,
+      "omitted_false_acceptance_fraction": 0.5520833333333334,
+      "omitted_unresolved_fraction": 0.13541666666666666,
+      "omitted_out_of_class_fraction": 0.3125,
+      "confusion_counts": {
+        "kerr": {
+          "kerr": 179,
+          "thermal": 0,
+          "mixed": 1,
+          "unresolved": 11,
+          "out_of_class": 1
+        },
+        "thermal": {
+          "kerr": 0,
+          "thermal": 177,
+          "mixed": 0,
+          "unresolved": 14,
+          "out_of_class": 1
+        },
+        "mixed": {
+          "kerr": 0,
+          "thermal": 0,
+          "mixed": 187,
+          "unresolved": 4,
+          "out_of_class": 1
+        },
+        "omitted": {
+          "kerr": 0,
+          "thermal": 11,
+          "mixed": 95,
+          "unresolved": 26,
+          "out_of_class": 60
+        }
+      },
+      "second_frequencies_hz": {
+        "1000": 768
+      }
+    }
+  },
+  "paired_comparisons": {
+    "omitted_reject": {
+      "difference": 0.3125,
+      "paired_bootstrap_95": [
+        0.25,
+        0.3802083333333333
+      ],
+      "n": 192,
+      "add_only": 60,
+      "replicate_only": 0
+    },
+    "known_correct": {
+      "difference": 0.006944444444444444,
+      "paired_bootstrap_95": [
+        -0.013888888888888888,
+        0.027777777777777776
+      ],
+      "n": 576,
+      "add_only": 20,
+      "replicate_only": 16
+    },
+    "known_false_reject": {
+      "difference": -0.008680555555555556,
+      "paired_bootstrap_95": [
+        -0.019097222222222224,
+        0.001736111111111111
+      ],
+      "n": 576,
+      "add_only": 2,
+      "replicate_only": 7
+    },
+    "omitted_false_accept": {
+      "difference": -0.4166666666666667,
+      "paired_bootstrap_95": [
+        -0.4895833333333333,
+        -0.3385416666666667
+      ],
+      "n": 192,
+      "add_only": 4,
+      "replicate_only": 84
+    }
+  },
+  "passes": {
+    "meaningful_omitted_reject_gain": true,
+    "known_accuracy_guardrail": true,
+    "false_rejection_guardrail": true
+  },
+  "all_criteria_met": true,
+  "cases": [
+    {
+      "truth": "kerr",
+      "case_within_label": 0,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 1,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 2,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 3,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 4,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 5,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 6,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 7,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 8,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 9,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 10,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 11,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 12,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 13,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 14,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 15,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 16,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 17,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 18,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 19,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 20,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 21,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 22,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 23,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 24,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 25,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 26,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 27,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 28,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 29,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 30,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 31,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 32,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 33,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 34,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 35,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 36,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 37,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 38,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 39,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 40,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 41,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 42,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 43,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 44,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 45,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 46,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 47,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 48,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 49,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 50,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 51,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 52,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 53,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 54,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 55,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 56,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 57,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 58,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 59,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 60,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 61,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 62,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 63,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 64,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 65,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 66,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 67,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 68,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 69,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 70,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 71,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 72,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 73,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 74,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 75,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 76,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 77,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 78,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 79,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 80,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 81,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 82,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 83,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 84,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 85,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 86,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 87,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 88,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 89,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 90,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 91,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 92,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 93,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 94,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 95,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 96,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 97,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 98,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 99,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 100,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 101,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 102,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 103,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 104,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 105,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 106,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 107,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 108,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 109,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 110,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 111,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 112,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 113,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 114,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 115,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 116,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 117,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 118,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 119,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 120,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 121,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 122,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 123,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 124,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 125,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 126,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 127,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 128,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 129,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 130,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 131,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 132,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 133,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 134,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 135,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 136,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 137,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 138,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 139,
+      "replicate_300": "unresolved",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 140,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 141,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 142,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 143,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 144,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 145,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 146,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 147,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 148,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 149,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 150,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 151,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 152,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 153,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 154,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 155,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 156,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 157,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 158,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 159,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 160,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 161,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 162,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 163,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 164,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 165,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 166,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 167,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 168,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 169,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 170,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 171,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 172,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 173,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 174,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 175,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 176,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 177,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 178,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 179,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 180,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 181,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 182,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 183,
+      "replicate_300": "kerr",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 184,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 185,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 186,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 187,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 188,
+      "replicate_300": "kerr",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 189,
+      "replicate_300": "unresolved",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 190,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "kerr",
+      "case_within_label": 191,
+      "replicate_300": "kerr",
+      "add_1000": "kerr"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 0,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 1,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 2,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 3,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 4,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 5,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 6,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 7,
+      "replicate_300": "out_of_class",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 8,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 9,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 10,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 11,
+      "replicate_300": "thermal",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 12,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 13,
+      "replicate_300": "out_of_class",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 14,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 15,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 16,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 17,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 18,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 19,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 20,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 21,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 22,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 23,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 24,
+      "replicate_300": "thermal",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 25,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 26,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 27,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 28,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 29,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 30,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 31,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 32,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 33,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 34,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 35,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 36,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 37,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 38,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 39,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 40,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 41,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 42,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 43,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 44,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 45,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 46,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 47,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 48,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 49,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 50,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 51,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 52,
+      "replicate_300": "out_of_class",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 53,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 54,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 55,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 56,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 57,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 58,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 59,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 60,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 61,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 62,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 63,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 64,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 65,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 66,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 67,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 68,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 69,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 70,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 71,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 72,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 73,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 74,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 75,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 76,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 77,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 78,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 79,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 80,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 81,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 82,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 83,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 84,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 85,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 86,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 87,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 88,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 89,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 90,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 91,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 92,
+      "replicate_300": "thermal",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 93,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 94,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 95,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 96,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 97,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 98,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 99,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 100,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 101,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 102,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 103,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 104,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 105,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 106,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 107,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 108,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 109,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 110,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 111,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 112,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 113,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 114,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 115,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 116,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 117,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 118,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 119,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 120,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 121,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 122,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 123,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 124,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 125,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 126,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 127,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 128,
+      "replicate_300": "out_of_class",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 129,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 130,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 131,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 132,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 133,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 134,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 135,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 136,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 137,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 138,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 139,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 140,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 141,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 142,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 143,
+      "replicate_300": "out_of_class",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 144,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 145,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 146,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 147,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 148,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 149,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 150,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 151,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 152,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 153,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 154,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 155,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 156,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 157,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 158,
+      "replicate_300": "thermal",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 159,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 160,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 161,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 162,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 163,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 164,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 165,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 166,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 167,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 168,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 169,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 170,
+      "replicate_300": "thermal",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 171,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 172,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 173,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 174,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 175,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 176,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 177,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 178,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 179,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 180,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 181,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 182,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 183,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 184,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 185,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 186,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 187,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 188,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 189,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 190,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "thermal",
+      "case_within_label": 191,
+      "replicate_300": "thermal",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 0,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 1,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 2,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 3,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 4,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 5,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 6,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 7,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 8,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 9,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 10,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 11,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 12,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 13,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 14,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 15,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 16,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 17,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 18,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 19,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 20,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 21,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 22,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 23,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 24,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 25,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 26,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 27,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 28,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 29,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 30,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 31,
+      "replicate_300": "out_of_class",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 32,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 33,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 34,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 35,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 36,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 37,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 38,
+      "replicate_300": "thermal",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 39,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 40,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 41,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 42,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 43,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 44,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 45,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 46,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 47,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 48,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 49,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 50,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 51,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 52,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 53,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 54,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 55,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 56,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 57,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 58,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 59,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 60,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 61,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 62,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 63,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 64,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 65,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 66,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 67,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 68,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 69,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 70,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 71,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 72,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 73,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 74,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 75,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 76,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 77,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 78,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 79,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 80,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 81,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 82,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 83,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 84,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 85,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 86,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 87,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 88,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 89,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 90,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 91,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 92,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 93,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 94,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 95,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 96,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 97,
+      "replicate_300": "out_of_class",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 98,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 99,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 100,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 101,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 102,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 103,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 104,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 105,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 106,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 107,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 108,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 109,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 110,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 111,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 112,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 113,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 114,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 115,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 116,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 117,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 118,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 119,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 120,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 121,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 122,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 123,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 124,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 125,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 126,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 127,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 128,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 129,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 130,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 131,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 132,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 133,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 134,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 135,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 136,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 137,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 138,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 139,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 140,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 141,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 142,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 143,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 144,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 145,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 146,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 147,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 148,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 149,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 150,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 151,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 152,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 153,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 154,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 155,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 156,
+      "replicate_300": "out_of_class",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 157,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 158,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 159,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 160,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 161,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 162,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 163,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 164,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 165,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 166,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 167,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 168,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 169,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 170,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 171,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 172,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 173,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 174,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 175,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 176,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 177,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 178,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 179,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 180,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 181,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 182,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 183,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 184,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 185,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 186,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 187,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 188,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 189,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 190,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "mixed",
+      "case_within_label": 191,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 0,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 1,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 2,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 3,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 4,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 5,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 6,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 7,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 8,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 9,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 10,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 11,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 12,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 13,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 14,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 15,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 16,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 17,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 18,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 19,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 20,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 21,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 22,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 23,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 24,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 25,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 26,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 27,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 28,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 29,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 30,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 31,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 32,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 33,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 34,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 35,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 36,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 37,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 38,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 39,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 40,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 41,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 42,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 43,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 44,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 45,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 46,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 47,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 48,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 49,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 50,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 51,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 52,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 53,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 54,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 55,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 56,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 57,
+      "replicate_300": "unresolved",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 58,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 59,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 60,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 61,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 62,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 63,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 64,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 65,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 66,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 67,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 68,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 69,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 70,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 71,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 72,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 73,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 74,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 75,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 76,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 77,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 78,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 79,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 80,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 81,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 82,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 83,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 84,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 85,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 86,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 87,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 88,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 89,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 90,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 91,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 92,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 93,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 94,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 95,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 96,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 97,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 98,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 99,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 100,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 101,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 102,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 103,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 104,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 105,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 106,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 107,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 108,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 109,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 110,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 111,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 112,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 113,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 114,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 115,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 116,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 117,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 118,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 119,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 120,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 121,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 122,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 123,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 124,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 125,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 126,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 127,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 128,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 129,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 130,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 131,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 132,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 133,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 134,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 135,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 136,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 137,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 138,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 139,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 140,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 141,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 142,
+      "replicate_300": "unresolved",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 143,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 144,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 145,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 146,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 147,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 148,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 149,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 150,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 151,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 152,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 153,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 154,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 155,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 156,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 157,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 158,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 159,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 160,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 161,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 162,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 163,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 164,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 165,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 166,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 167,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 168,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 169,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 170,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 171,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 172,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 173,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 174,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 175,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 176,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 177,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 178,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 179,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 180,
+      "replicate_300": "mixed",
+      "add_1000": "thermal"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 181,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 182,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 183,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 184,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 185,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 186,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 187,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 188,
+      "replicate_300": "mixed",
+      "add_1000": "mixed"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 189,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 190,
+      "replicate_300": "mixed",
+      "add_1000": "out_of_class"
+    },
+    {
+      "truth": "omitted",
+      "case_within_label": 191,
+      "replicate_300": "mixed",
+      "add_1000": "unresolved"
+    }
+  ]
+}
